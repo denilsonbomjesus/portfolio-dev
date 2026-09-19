@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Denilson José do Bom Jesus — Engenheiro de Computação, Desenvolvedor Full Stack e Entusiasta de IA.">
+    <meta name="theme-color" content="#0a0a14">
+    <title>Denilson Bom Jesus | Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">DJ</div>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor__dot" id="cursorDot"></div>
+    <div class="cursor__ring" id="cursorRing"></div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#hero" class="nav__logo" data-hover><span class="nav__logo-mark">DJ</span> denilson<span class="nav__logo-accent">.</span></a>
+            <nav class="nav__links" id="navLinks">
+                <a href="#hero" data-hover class="nav__link nav__link--active">Início</a>
+                <a href="#sobre" data-hover class="nav__link">Sobre</a>
+                <a href="#skills" data-hover class="nav__link">Skills</a>
+                <a href="#stack" data-hover class="nav__link">Stack</a>
+                <a href="#projetos" data-hover class="nav__link">Projetos</a>
+                <a href="#formacao" data-hover class="nav__link">Formação</a>
+                <a href="#contato" data-hover class="nav__link">Contato</a>
+            </nav>
+            <div class="nav__right">
+                <a href="#contato" class="btn btn--small" data-hover>Contrate-me</a>
+                <button class="nav__toggle" id="menuToggle" aria-label="Abrir menu" data-hover>
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <div class="orb orb--1"></div>
+            <div class="orb orb--2"></div>
+            <div class="orb orb--3"></div>
+            <div class="grid-overlay"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero__inner">
+            <div class="hero__content">
+                <div class="hero__badge" data-hover>
+                    <span class="pulse-dot"></span>
+                    Disponível para oportunidades
+                </div>
+                <h1 class="hero__title">
+                    <span class="line">Olá, eu sou</span>
+                    <span class="line gradient-text">Denilson Bom Jesus</span>
+                </h1>
+                <p class="hero__rotator">
+                    <span class="rotator-label">>_</span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="caret"></span>
+                </p>
+                <p class="hero__desc">
+                    Engenheiro de Computação formado pela <strong>POLI/UPE</strong>, com paixão por transformar
+                    ideias em soluções digitais. Especialista em desenvolvimento web, inteligência artificial e
+                    automação — construindo produtos que fazem diferença.
+                </p>
+                <div class="hero__cta">
+                    <a href="#projetos" class="btn btn--primary" data-hover>
+                        Explorar Projetos
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    </a>
+                    <a href="#contato" class="btn btn--ghost" data-hover>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+                        Fale Comigo
+                    </a>
+                </div>
+                <div class="hero__socials">
+                    <a href="https://github.com/denilsonbomjesus" target="_blank" rel="noopener" class="hero__social-icon" data-hover aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/denilson-josé-do-bom-jesus-5abb13211" target="_blank" rel="noopener" class="hero__social-icon" data-hover aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="mailto:denilsonbomjesus@gmail.com" class="hero__social-icon" data-hover aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <div class="hero__avatar">
+                    <div class="hero__avatar-ring"></div>
+                    <img src="https://avatars.githubusercontent.com/u/96699536?v=4" alt="Foto de perfil de Denilson Bom Jesus" data-hover>
+                    <div class="hero__avatar-badge hero__avatar-badge--1" data-hover>AI</div>
+                    <div class="hero__avatar-badge hero__avatar-badge--2" data-hover>Web</div>
+                    <div class="hero__avatar-badge hero__avatar-badge--3" data-hover>Code</div>
+                </div>
+                <div class="hero__stats" id="heroStats">
+                    <div class="hero__stat" data-hover>
+                        <div class="hero__stat-value"><span data-counter="77">0</span>+</div>
+                        <div class="hero__stat-label">Repositórios</div>
+                    </div>
+                    <div class="hero__stat" data-hover>
+                        <div class="hero__stat-value"><span data-counter="15">0</span></div>
+                        <div class="hero__stat-label">Estrelas</div>
+                    </div>
+                    <div class="hero__stat" data-hover>
+                        <div class="hero__stat-value"><span data-counter="12">0</span>+</div>
+                        <div class="hero__stat-label">Seguidores</div>
+                    </div>
+                    <div class="hero__stat" data-hover>
+                        <div class="hero__stat-value"><span data-counter="2021">0</span></div>
+                        <div class="hero__stat-label">Desde</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#sobre" class="hero__scroll-down" data-hover aria-label="Role para baixo">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- About / Sobre -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="section__header" data-reveal>
+                <span class="section__tag">Sobre Mim</span>
+                <h2 class="section__title">Quem está <span class="gradient-text">por trás</span> do código</h2>
+                <p class="section__subtitle">
+                    Sou <strong>Denilson José do Bom Jesus</strong>, Engenheiro da Computação formado pela
+                    <strong>Escola Politécnica de Pernambuco (POLI/UPE)</strong>. Minha jornada combina a
+                    base sólida da engenharia de software com a paixão por inteligência artificial e
+                    automação.
+                </p>
+            </div>
+            <div class="about__wrap" data-reveal>
+                <div class="about__info">
+                    <p class="about__lead">
+                        Sou <strong>Denilson José do Bom Jesus</strong>, Engenheiro da Computação formado pela
+                        <strong>Escola Politécnica de Pernambuco (POLI/UPE)</strong>. Minha jornada combina a
+                        base sólida da engenharia de software com a paixão por inteligência artificial e
+                        automação.
+                    </p>
+                    <p class="about__text">
+                        Meus projetos vão de <strong>stacks completas de IA locais</strong> (rodando LLMs,
+                        Stable Diffusion e agentes autônomos 100% no hardware próprio, sem dependência de nuvem)
+                        até <strong>aplicações web</strong> em React, TypeScript e Python. Gosto de resolver
+                        problemas complexos com soluções enxutas e eficientes.
+                    </p>
+                    <div class="about__points">
+                        <div class="about__point" data-reveal>
+                            <span class="about__point-num">01</span>
+                            <h4>IA Local & Automação</h4>
+                            <p>Arquiteto e orquestração de stacks de IA que rodam offline: LLMs via llama.cpp, gateways FastAPI e agentes autônomos.</p>
+                        </div>
+                        <div class="about__point" data-reveal>
+                            <span class="about__point-num">02</span>
+                            <h4>Engenharia de Software</h4>
+                            <p>Base em POO, sistemas embarcados, processamento de imagens e fundamentos da engenharia de software.</p>
+                        </div>
+                        <div class="about__point" data-reveal>
+                            <span class="about__point-num">03</span>
+                            <h4>Data Science & PLN</h4>
+                            <p>Aplico Machine Learning e Processamento de Linguagem Natural em problemas reais, como triagem médica e busca semântica.</p>
+                        </div>
+                        <div class="about__point" data-reveal>
+                            <span class="about__point-num">04</span>
+                            <h4>Desenvolvimento Full Stack</h4>
+                            <p>Construção de aplicações web completas — do front em React/TypeScript ao back em Python e bancos de dados.</p>
+                        </div>
+                    </div>
+                    <div class="about__cta">
+                        <a href="#projetos" class="btn btn--primary" data-hover>
+                            Ver Projetos
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="https://github.com/denilsonbomjesus?tab=repositories" target="_blank" rel="noopener" class="btn btn--ghost" data-hover>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="about__visual" data-reveal>
+                    <div class="about__card">
+                        <div class="about__card-bar">
+                            <span></span><span></span><span></span>
+                            <em class="about__card-title">denilson.dev</em>
+                        </div>
+                        <div class="about__card-body">
+                            <pre><code><span class="code-purple">const</span> <span class="code-cyan">developer</span> <span class="code-purple">=</span> {
+  <span class="code-cyan">nome</span>: <span class="code-string">"Denilson Bom Jesus"</span>,
+  <span class="code-cyan">formacao</span>: <span class="code-string">"Eng. Computação — POLI/UPE"</span>,
+  <span class="code-cyan">foco</span>: [
+    <span class="code-string">"IA Local"</span>,
+    <span class="code-string">"Full Stack"</span>,
+    <span class="code-string">"Data Science"</span>,
+  ],
+  <span class="code-cyan">disponivel</span>: <span class="code-orange">true</span>,
+  <span class="code-cyan">palavras</span>: <span class="code-purple">()</span> <span class="code-purple">=></span> <span class="code-purple">{</span>
+    <span class="code-purple">return</span> <span class="code-string">"Vamos construir algo!"</span>;
+  <span class="code-purple">}</span>
+};</code></pre>
+                        </div>
+                        <div class="about__chips">
+                            <span class="about__chip">IA</span>
+                            <span class="about__chip">Web</span>
+                            <span class="about__chip">Python</span>
+                            <span class="about__chip">JS/TS</span>
+                            <span class="about__chip">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section__header" data-reveal>
+                <span class="section__tag">01 — Habilidades</span>
+                <h2 class="section__title">Minhas <span class="gradient-text">Skills</span></h2>
+                <p class="section__subtitle">Conhecimentos técnicos que domino e aplico diariamente na construção de soluções.</p>
+            </div>
+            <div class="skills__grid">
+                <div class="skills__card" data-reveal>
+                    <div class="skills__icon skills__icon--frontend">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>
+                    </div>
+                    <h3>Frontend</h3>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>HTML & CSS</span><span>95%</span></div>
+                        <div class="skills__bar"><span style="--progress:95%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>JavaScript / TS</span><span>90%</span></div>
+                        <div class="skills__bar"><span style="--progress:90%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>React / Vite</span><span>85%</span></div>
+                        <div class="skills__bar"><span style="--progress:85%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>Three.js / Canvas</span><span>75%</span></div>
+                        <div class="skills__bar"><span style="--progress:75%"></span></div>
+                    </div>
+                </div>
+                <div class="skills__card" data-reveal">
+                    <div class="skills__icon skills__icon--backend">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></svg>
+                    </div>
+                    <h3>Backend & Dados</h3>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>Python</span><span>92%</span></div>
+                        <div class="skills__bar"><span style="--progress:92%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>APIs / FastAPI</span><span>80%</span></div>
+                        <div class="skills__bar"><span style="--progress:80%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>SQL / MySQL</span><span>78%</span></div>
+                        <div class="skills__bar"><span style="--progress:78%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>Data Science</span><span>82%</span></div>
+                        <div class="skills__bar"><span style="--progress:82%"></span></div>
+                    </div>
+                </div>
+                <div class="skills__card" data-reveal>
+                    <div class="skills__icon skills__icon--ai">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a4 4 0 014 4v.5a4 4 0 013 3.5V17a5 5 0 01-5 5h-4a5 5 0 01-5 5v-7a4 4 0 013-3.5V6a4 4 0 014-4z"/><path d="M9 12h6M12 9v6"/></svg>
+                    </div>
+                    <h3>IA & Machine Learning</h3>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>ML / NLP</span><span>88%</span></div>
+                        <div class="skills__bar"><span style="--progress:88%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>Transformers / BioBERT</span><span>80%</span></div>
+                        <div class="skills__bar"><span style="--progress:80%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>Stable Diffusion</span><span>72%</span></div>
+                        <div class="skills__bar"><span style="--progress:72%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>Llama.cpp / IA Local</span><span>78%</span></div>
+                        <div class="skills__bar"><span style="--progress:78%"></span></div>
+                    </div>
+                </div>
+                <div class="skills__card" data-reveal>
+                    <div class="skills__icon skills__icon--devops">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
+                    </div>
+                    <h3>DevOps & Ferramentas</h3>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>Docker / Compose</span><span>86%</span></div>
+                        <div class="skills__bar"><span style="--progress:86%"></span></div>
+                    </div>
+                    <div class="skills__item>
+                        <div class="skills__meta"><span>GitHub Actions</span><span>82%</span></div>
+                        <div class="skills__bar"><span style="--progress:82%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>Git / WSL2 / Linux</span><span>88%</span></div>
+                        <div class="skills__bar"><span style="--progress:88%"></span></div>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills__meta"><span>Automação</span><span>84%</span></div>
+                        <div class="skills__bar"><span style="--progress:84%"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="stack" id="stack">
+        <div class="container">
+            <div class="section__header" data-reveal>
+                <span class="section__tag">02 — Stack</span>
+                <h2 class="section__title">Tecnologias que <span class="gradient-text">uso</span></h2>
+                <p class="section__subtitle">Um ecossistema diversificado que domino em diferentes níveis de profundidade.</p>
+            </div>
+        </div>
+        <div class="stack__marquee">
+            <div class="stack__track" id="stackTrack"></div>
+        </div>
+        <div class="container">
+            <div class="stack__grid" id="stackGrid"></div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projetos">
+        <div class="container">
+            <div class="section__header" data-reveal>
+                <span class="section__tag">03 — Projetos</span>
+                <h2 class="section__title">Projetos <span class="gradient-text">em Destaque</span></h2>
+                <p class="section__subtitle">Uma seleção dos projetos que melhor representam minha experiência prática e versatilidade.</p>
+            </div>
+            <div class="projects__grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Forming / Education -->
+    <section class="formation" id="formacao">
+        <div class="container">
+            <div class="section__header" data-reveal>
+                <span class="section__tag">04 — Formação</span>
+                <h2 class="section__title">Caminho <span class="gradient-text">Profissional</span></h2>
+                <p class="section__subtitle">Minha trajetória acadêmica e os marcos que moldaram minha carreira.</p>
+            </div>
+            <div class="formation__timeline">
+                <div class="formation__item" data-reveal>
+                    <div class="formation__marker"></div>
+                    <div class="formation__content">
+                        <span class="formation__date">Poli/UPE</span>
+                        <h3>Engenharia de Computação</h3>
+                        <p>Formação na <strong>Escola Politécnica de Pernambuco da Universidade de Pernambuco</strong> — base sólida em algoritmos, sistemas embarcados, processamento de imagens, programação orientada a objetos e fundamentos da engenharia de software.</p>
+                    </div>
+                </div>
+                <div class="formation__item" data-reveal>
+                    <div class="formation__marker"></div>
+                    <div class="formation__content">
+                        <span class="formation__date">Alura</span>
+                        <h3>Cursos de Desenvolvimento Web</h3>
+                        <p>Formação prática em <strong>HTML, CSS e JavaScript</strong>, incluindo projetos como barbearia, página de apetrechos, quizzes, CRUDs e jogos em Canvas — base essencial para minha evolução frontend.</p>
+                    </div>
+                </div>
+                <div class="formation__item" data-reveal>
+                    <div class="formation__marker"></div>
+                    <div class="formation__content">
+                        <span class="formation__date">DIO</span>
+                        <h3>Machine Learning & IA</h3>
+                        <p>Trilhas de <strong>Inteligência Artificial e Machine Learning</strong>, complementadas por estudos autodidatas em Transformers, redes neurais, processamento de linguagem natural e IA generativa local.</p>
+                    </div>
+                </div>
+                <div class="formation__item" data-reveal>
+                    <div class="formation__marker"></div>
+                    <div class="formation__content">
+                        <span class="formation__date">Em andamento</span>
+                        <h3>IA Generativa & Agentes Autônomos</h3>
+                        <p>Exploração ativa de <strong>Llama.cpp, Open WebUI, OpenCode e APIs locais</strong> — desenvolvendo stacks completas de IA rodando 100% no próprio hardware, sem dependência de nuvem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="contact__card" data-reveal>
+                <div class="contact__info">
+                    <span class="section__tag">05 — Contato</span>
+                    <h2 class="contact__title">Vamos <span class="gradient-text">conversar?</span></h2>
+                    <p>Estou aberto a oportunidades de trabalho, projetos colaborativos, freelances e parcerias. Seja para desenvolver uma aplicação, implementar IA ou construir algo incrível — seu projeto pode ser o próximo!</p>
+                    <div class="contact__links">
+                        <a href="https://github.com/denilsonbomjesus" target="_blank" rel="noopener" class="contact__link" data-hover>
+                            <span class="contact__icon contact__icon--github">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            </span>
+                            <span><strong>GitHub</strong><small>@denilsonbomjesus</small></span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/denilson-josé-do-bom-jesus-5abb13211" target="_blank" rel="noopener" class="contact__link" data-hover>
+                            <span class="contact__icon contact__icon--linkedin">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </span>
+                            <span><strong>LinkedIn</strong><small>/in/denilson-jose-do-bom-jesus</small></span>
+                        </a>
+                        <a href="mailto:denilsonbomjesus@gmail.com" class="contact__link" data-hover>
+                            <span class="contact__icon contact__icon--email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                            </span>
+                            <span><strong>Email</strong><small>denilsonbomjesus@gmail.com</small></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact__visual">
+                    <div class="contact__orb"></div>
+                    <div class="contact__code">
+                        <div class="code__window">
+                            <div class="code__window-bar"><span></span><span></span><span></span></div>
+                            <pre><code><span class="code-purple"><body></span>
+  <span class="code-cyan"><h1></span>Hello, World!<span class="code-cyan"></h1></span>
+<span class="code-purple"></body></span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <span class="nav__logo-mark">DJ</span>
+                <p>© 2026 Denilson Bom Jesus. Todos os direitos reservados.</p>
+            </div>
+            <p class="footer__tagline">Feito com <span class="footer__heart">♥</span> e muito café</p>
+            <a href="#hero" class="footer__to-top" data-hover>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                Voltar ao Topo
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
